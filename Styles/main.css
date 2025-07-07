@@ -1,5 +1,26 @@
 @charset "UTF-8";
 @import "..//node_modules/bootstrap-icons/font/bootstrap-icons.css";
+p {
+  font-family: "Hind Madurai", serif;
+  font-size: 14px;
+  margin-bottom: 0 !important;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* To do a sticky footer */
+.d-flex-column-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* The main content fill the rest of the page */
+}
+.d-flex-column-wrapper main {
+  flex: 1;
+}
+
 /*!
  * Bootstrap  v5.3.7 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

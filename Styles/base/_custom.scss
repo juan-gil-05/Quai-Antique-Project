@@ -1,11 +1,36 @@
+// Style define
 $primary : #906427;
 $secondary : #B6AC97;
 $dark : #392C1E;
 $bg-dark : #292222;
 $danger : rgb(216 51 67 / 85%);
-$font-family-sans-serif : "Montserrat", sans-serif !default; // headline et subtitle text
-$font-family-serif : "Hind Madurai", serif; // content Text
+$font-family-sans-serif : "Montserrat",sans-serif !default; // headline et subtitle text
+$font-family-serif : "Hind Madurai",serif; // content Text
 
+// Content text
+p{
+    font-family: $font-family-serif;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+}
+
+
+
+body, html{
+    height: 100%;
+}
+
+/* To do a sticky footer */
+.d-flex-column-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* The main content fill the rest of the page */
+    main {
+        flex: 1;
+    }
+}
 
 
 
@@ -14,6 +39,4 @@ $font-family-serif : "Hind Madurai", serif; // content Text
 
 
 //Importation de bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap"; 
-
-
+@import "../../node_modules/bootstrap/scss/bootstrap";
