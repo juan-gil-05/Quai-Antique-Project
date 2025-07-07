@@ -34,11 +34,11 @@ const LoadContentPage = async () => {
 
 
     // Ajout du contenu JavaScript
-    if (actualRoute.pathJS != "") {
+    if (actualRoute.pathJs != "") {
         // Création d'une balise script
         var scriptTag = document.createElement("script");
         scriptTag.setAttribute("type", "text/javascript");
-        scriptTag.setAttribute("src", actualRoute.pathJS);
+        scriptTag.setAttribute("src", actualRoute.pathJs);
 
         // Ajout de la balise script au corps du document
         document.querySelector("body").appendChild(scriptTag);
