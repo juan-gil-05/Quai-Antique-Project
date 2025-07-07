@@ -10,8 +10,13 @@ $font-family-serif : "Hind Madurai",serif; // content Text
 // Content text
 p{
     font-family: $font-family-serif;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 0 !important;
+}
+
+.small-text{
+    font-family: $font-family-serif;
+    font-size: 14px;
 }
 
 
