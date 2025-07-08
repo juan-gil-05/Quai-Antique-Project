@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="Styles/main.css" />
     <title>Quai Antique</title>
-  </head>
-  <section class="d-flex-column-wrapper">
+</head>
+<section class="d-flex-column-wrapper">
+
     <body>
-      <header>
         <header>
-          <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/">Quai Antique</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/accueil">Accueil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/galerie">Galerie</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">La carte</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/allReservations">Les réservations</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/account">Mon compte</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/login">Connexion</a>
-                  </li>
-                  <li class="nav-item">
-                    <button class="nav-link" id="logout-btn">Déconnexion</>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+            <header>
+                <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">Quai Antique</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/accueil">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/galerie">Galerie</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">La carte</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/allReservations">Les réservations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/account">Mon compte</a>
+                                </li>
+                                <li class="nav-item" data-show="disconnected">
+                                    <a class="nav-link" href="/login">Connexion</a>
+                                </li>
+                                <li class="nav-item" data-show="connected">
+                                    <button class="nav-link" id="logout-btn">Déconnexion</>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
         </header>
-      </header>
 
-      <main id="main-page">
-        <!-- Here the main page content -->
-      </main>
+        <main id="main-page">
+            <!-- Here the main page content -->
+        </main>
 
-      <footer class="bg-dark text-white text-center p-3">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-4">
-            <h3 class="text-primary">Nos horaires</h3>
-            <p class="small-text">Du mardi au dimanche 12:00-14:00 18:00-23:00</p>
-          </div>
-          <div class="col-6 col-lg-4">
-            <p class="small-text">
-              Quai Antique <br />
-              5 rue de la vie <br />
-              73018 Chambéry <br />
-              06 43 31 43 54 <br />
-            </p>
-          </div>
-          <div class="col-6 col-lg-4">
-            <p class="small-text">contact@quaiAntique.com</p>
-          </div>
-        </div>
-      </footer>
+        <footer class="bg-dark text-white text-center p-3">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-4">
+                    <h3 class="text-primary">Nos horaires</h3>
+                    <p class="small-text">Du mardi au dimanche 12:00-14:00 18:00-23:00</p>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="small-text">
+                        Quai Antique <br />
+                        5 rue de la vie <br />
+                        73018 Chambéry <br />
+                        06 43 31 43 54 <br />
+                    </p>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <p class="small-text">contact@quaiAntique.com</p>
+                </div>
+            </div>
+        </footer>
 
-      <script type="module" src="Router/Router.js"></script>
-      <script src="./Js/script.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="Router/Router.js"></script>
+        <script src="./Js/script.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
-  </section>
+</section>
+
 </html>
