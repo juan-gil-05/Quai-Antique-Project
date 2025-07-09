@@ -100,3 +100,10 @@ ROLES :
     - admin
     - client
 */
+
+// Afin d'eviter les ataques XSS (Injections du code malveillant)
+function sanitizeHtml(text) {
+    const tempHtml = document.createElement("div")
+    tempHtml.textContent = text
+    return tempHtml.innerHTML
+}
