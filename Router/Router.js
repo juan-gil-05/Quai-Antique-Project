@@ -1,7 +1,7 @@
 import Route from "./route.js"
 import { allRoutes, websiteName } from "./AllRoutes.js"
 
-const route404 = new Route("404", "Page introuvable", "/Pages/404.html", [])
+var route404 = new Route("404", "Page introuvable", "/Pages/404.html", [])
 
 // Fonction pour récupérer la route correspondant à une URL donnée
 const getRouteByUrl = (url) => {

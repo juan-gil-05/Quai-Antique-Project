@@ -1,0 +1,12 @@
+{
+    "mdb.presetConnections": [
+        {
+            "name": "Preset Connection",
+            "connectionString": "mongodb://localhost:27017"
+        }
+    ],
+    "sonarlint.connectedMode.project": {
+        "connectionId": "juan-gil-05",
+        "projectKey": "juan-gil-05_Quai-Antique-Project"
+    }
+}
