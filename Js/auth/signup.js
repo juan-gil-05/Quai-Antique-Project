@@ -6,7 +6,7 @@ const inputMail = document.getElementById("EmailInput")
 const inputPassword = document.getElementById("PasswordInput")
 const inputValidationPassword = document.getElementById("ValidatePasswordInput")
 const inputNbConvives = document.getElementById("NbConvivesInput")
-const btnValidation = document.getElementById('btn-validate-signup')
+const btnValidation = document.getElementById("btn-validate-signup")
 const formInscription = document.getElementById("form-inscription")
 
 inputNom.addEventListener("keyup", validateForm)
@@ -29,19 +29,20 @@ function validateForm() {
 
     if (nomOk && prenomOk && mailOk && nbConvivesOk && passwordOk && confirmPasswordOk) {
         btnValidation.disabled = false
-    } else (
-        btnValidation.disabled = true
-    )
+    } else {
+        (
+            btnValidation.disabled = true
+        )
+    }
 
 }
 
 function validateRequired(input) {
-    if (input.value != '') {
+    if (input.value != "") {
         input.classList.add("is-valid")
         input.classList.remove("is-invalid")
         return true
-    }
-    else {
+    } else {
         input.classList.remove("is-valid")
         input.classList.add("is-invalid")
         return false
@@ -56,8 +57,7 @@ function validateMail(input) {
         input.classList.add("is-valid")
         input.classList.remove("is-invalid")
         return true
-    }
-    else {
+    } else {
         input.classList.remove("is-valid")
         input.classList.add("is-invalid")
         return false
@@ -72,8 +72,7 @@ function validatePassword(input) {
         input.classList.add("is-valid")
         input.classList.remove("is-invalid")
         return true
-    }
-    else {
+    } else {
         input.classList.remove("is-valid")
         input.classList.add("is-invalid")
         return false
@@ -82,14 +81,13 @@ function validatePassword(input) {
 
 function validateConfirmationPassword(inputPwd, inputConfirmPwd) {
     if (inputPwd.value == inputConfirmPwd.value) {
-        inputConfirmPwd.classList.add("is-valid");
-        inputConfirmPwd.classList.remove("is-invalid");
-        return true;
-    }
-    else {
-        inputConfirmPwd.classList.add("is-invalid");
-        inputConfirmPwd.classList.remove("is-valid");
-        return false;
+        inputConfirmPwd.classList.add("is-valid")
+        inputConfirmPwd.classList.remove("is-invalid")
+        return true
+    } else {
+        inputConfirmPwd.classList.add("is-invalid")
+        inputConfirmPwd.classList.remove("is-valid")
+        return false
     }
 }
 
@@ -97,8 +95,8 @@ function userInscription() {
 
     const dataForm = new FormData(formInscription)
 
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    const myHeaders = new Headers()
+    myHeaders.append("Content-Type", "application/json")
 
     const raw = JSON.stringify({
         "email": dataForm.get("email"),
@@ -106,27 +104,26 @@ function userInscription() {
         "first_name": dataForm.get("first-name"),
         "last_name": dataForm.get("last-name"),
         "guest_number": dataForm.get("guest_number")
-    });
+    })
 
     const requestOptions = {
         method: "POST",
         headers: myHeaders,
         body: raw,
         redirect: "follow"
-    };
+    }
 
     fetch(apiUrl + "registration", requestOptions)
         .then(response => {
             if (response.ok) {
-                return response.json();
-            }
-            else {
-                alert("Erreur lors de l'inscription");
+                return response.json()
+            } else {
+                alert("Erreur lors de l'inscription")
             }
         })
-        .then(result => {
-            alert("Bravo " + dataForm.get("first-name") + ", vous êtes maintenant inscrit, vous pouvez vous connecter.");
-            document.location.href = "/login";
+        .then(() => {
+            alert("Bravo " + dataForm.get("first-name") + ", vous êtes maintenant inscrit, vous pouvez vous connecter.")
+            document.location.href = "/login"
         })
-        .catch(error => console.log('error', error));
+        .catch(error => console.log("error", error))
 }

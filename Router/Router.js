@@ -1,7 +1,7 @@
 import Route from "./route.js"
-import { allRoutes, websiteName } from "./AllRoutes.js"
+import { allRoutes, websiteName } from "./allRoutes.js"
 
-var route404 = new Route("404", "Page introuvable", "/Pages/404.html", [])
+const route404 = new Route("404", "Page introuvable", "/Pages/404.html", [])
 
 // Fonction pour récupérer la route correspondant à une URL donnée
 const getRouteByUrl = (url) => {
@@ -35,8 +35,7 @@ const LoadContentPage = async () => {
             if (isConnected()) {
                 window.location.replace("/")
             }
-        }
-        else {
+        } else {
             const roleUser = getRole()
             if (!allRolesArray.includes(roleUser)) {
                 window.location.replace("/")
@@ -48,11 +47,10 @@ const LoadContentPage = async () => {
 
     document.getElementById("main-page").innerHTML = html
 
-
     // Ajout du contenu JavaScript
     if (actualRoute.pathJs != "") {
         // Création d'une balise script
-        var scriptTag = document.createElement("script")
+        const scriptTag = document.createElement("script")
         scriptTag.setAttribute("type", "text/javascript")
         scriptTag.setAttribute("src", actualRoute.pathJs)
 

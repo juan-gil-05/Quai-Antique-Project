@@ -1,4 +1,4 @@
-import Route from "./Route.js"
+import Route from "./route.js"
 
 export const allRoutes = [
     new Route("/", "Accueil", "/Pages/home.html", []),
@@ -9,7 +9,7 @@ export const allRoutes = [
     new Route("/account", "Mon compte", "/Pages/account.html", ["admin", "client"]),
     new Route("/editPassword", "Modifier le mot de passe", "/Pages/auth/editPassword.html", ["admin", "client"]),
     new Route("/allReservations", "Toutes les réservations", "/Pages/reservations/allReserv.html", ["client"]),
-    new Route("/reserver", "Faire une réservation", "/Pages/reservations/reserver.html", ["client"]),
+    new Route("/reserver", "Faire une réservation", "/Pages/reservations/reserver.html", ["client"])
 ]
 
 export const websiteName = "Quai Antique"
