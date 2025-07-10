@@ -14,11 +14,13 @@ jobs:
         server: ftp-quaiantique-juan.alwaysdata.net
         username: quaiantique-juan
         password: ${{ secrets.ftp_password }}
+        server-dir: /www/
+        protocol: ftps
+        passive: true
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/bootstrap/scss/**
           **/node_modules/bootstrap/js/**
           **/node_modules/bootstrap-icons/icons/**  
-        server-dir: /www/
-        protocol: ftps
+        
