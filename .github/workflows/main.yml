@@ -1,28 +1,24 @@
-on : push
-name: 🚀 Deploy website on push
+on: 
+  push:
+    branches:
+      - main
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-   
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ftp-quaiantique-juan.alwaysdata.net
-        username: quaiantique-juan
-        password: ${{ secrets.ftp_password }}
-        server-dir: /www/
-        protocol: ftps
-        passive: true
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/bootstrap/scss/**
-          **/node_modules/bootstrap/js/**
-          **/node_modules/bootstrap-icons/icons/**  
-          **/.vscode*
-          **/Documentation*
+      - uses: actions/checkout@v3
         
+      - name: Deploy to Alwaysdata 🚀
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY:        ${{ secrets.SSH_KEY_ALWAYSDATA }}
+          REMOTE_HOST:            ${{ secrets.REMOTE_HOST_ALWAYSDATA }}
+          REMOTE_USER:            ${{ secrets.REMOTE_USER_ALWAYSDATA }}
+          REMOTE_PORT:            22
+          TARGET:                 ~/www/
+          SSH_CMD_ARGS:           "-o StrictHostKeyChecking=no -o IdentitiesOnly=yes"
+          ARGS:                   "-rlgoDzvc -i"
+          SCRIPT_BEFORE:          "unset SSH_AUTH_SOCK"
+          # paths to exclude separated by `,`, ie: `/dist/, /node_modules/`
+          EXCLUDE: /.git/, /.github/, /.gitignore
+          SCRIPT_BEFORE_REQUIRED: true
