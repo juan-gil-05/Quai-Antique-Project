@@ -3,6 +3,13 @@ const tokenCookieName = "accesstoken"
 const logoutBtn = document.getElementById("logout-btn")
 const RoleCookieName = "role"
 const apiUrl = "http://127.0.0.1:8000/api/"
+/*
+ROLES : 
+  - disconnected
+  - connected
+    - admin
+    - client
+*/
 
 logoutBtn.addEventListener("click", signout)
 
@@ -93,10 +100,35 @@ function showAndHideElementsForRoles() {
     })
 }
 
-/*
-ROLES : 
-  - disconnected
-  - connected
-    - admin
-    - client
-*/
+// Afin d'eviter les ataques XSS (Injections du code malveillant)
+function sanitizeHtml(text) {
+    const tempHtml = document.createElement("div")
+    tempHtml.textContent = text
+    return tempHtml.innerHTML
+}
+
+function getInfosUser() {
+    const myHeaders = new Headers()
+    myHeaders.append("X-AUTH-TOKEN", getToken())
+
+    const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow"
+    }
+
+    fetch(apiUrl + "account/profil", requestOptions)
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                console.log("Impossible de récupérer les informations utilisateur")
+            }
+        })
+        .then(result => {
+            return result
+        })
+        .catch(error => {
+            console.error("erreur lors de la récupération des données utilisateur", error)
+        })
+}

@@ -13,7 +13,8 @@ export default defineConfig([
         isConnected: "writable",
         getRole: "writable",
         showAndHideElementsForRoles: "writable",
-        apiUrl: "writable"
+        apiUrl: "writable",
+        sanitizeHtml:"writable"
       }
     },
     rules: {
