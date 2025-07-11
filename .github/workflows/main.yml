@@ -20,5 +20,5 @@ jobs:
           ARGS:                   "-rlgoDzvc -i"
           SCRIPT_BEFORE:          "unset SSH_AUTH_SOCK"
           # paths to exclude separated by `,`, ie: `/dist/, /node_modules/`
-          EXCLUDE: /.git/, /.github/, /.gitignore
+          EXCLUDE: /.git/, /.github/, /.gitignore, /eslint.config.mjs, /package.json, /package-lock.json, /readme.md, /node_modules/bootstrap/scss/**, /node_modules/bootstrap/js/**, /node_modules/bootstrap-icons/icons/**
           SCRIPT_BEFORE_REQUIRED: true
