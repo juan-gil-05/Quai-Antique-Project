@@ -1,4 +1,4 @@
-import Route from "./route.js"
+import Route from "./Route.js"
 import { allRoutes, websiteName } from "./allRoutes.js"
 
 const route404 = new Route("404", "Page introuvable", "/Pages/404.html", [])
