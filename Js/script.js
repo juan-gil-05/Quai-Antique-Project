@@ -2,7 +2,7 @@
 const tokenCookieName = "accesstoken"
 const logoutBtn = document.getElementById("logout-btn")
 const RoleCookieName = "role"
-const apiUrl = "http://127.0.0.1:8000/api/"
+const apiUrl = "https://main-bvxea6i-hbxvgtrkal2cs.fr-4.platformsh.site/api/"
 /*
 ROLES : 
   - disconnected
