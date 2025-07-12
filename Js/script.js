@@ -10,7 +10,7 @@ ROLES :
     - admin
     - client
 */
-
+getInfosUser()
 logoutBtn.addEventListener("click", signout)
 
 function signout() {
@@ -117,16 +117,13 @@ function getInfosUser() {
         redirect: "follow"
     }
 
-    fetch(apiUrl + "account/profil", requestOptions)
+    return fetch(apiUrl + "account/profil", requestOptions)
         .then(response => {
             if (response.ok) {
                 return response.json()
             } else {
                 console.log("Impossible de récupérer les informations utilisateur")
             }
-        })
-        .then(result => {
-            return result
         })
         .catch(error => {
             console.error("erreur lors de la récupération des données utilisateur", error)

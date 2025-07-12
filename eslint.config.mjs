@@ -14,7 +14,8 @@ export default defineConfig([
         getRole: "writable",
         showAndHideElementsForRoles: "writable",
         apiUrl: "writable",
-        sanitizeHtml:"writable"
+        sanitizeHtml:"writable",
+        getInfosUser: "writable"
       }
     },
     rules: {
