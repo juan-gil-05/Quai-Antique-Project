@@ -3,6 +3,7 @@ const tokenCookieName = "accesstoken"
 const logoutBtn = document.getElementById("logout-btn")
 const RoleCookieName = "role"
 const apiUrl = "https://main-bvxea6i-hbxvgtrkal2cs.fr-4.platformsh.site/api/"
+const loader = document.getElementById("loader")
 /*
 ROLES : 
   - disconnected
@@ -10,8 +11,8 @@ ROLES :
     - admin
     - client
 */
-getInfosUser()
 logoutBtn.addEventListener("click", signout)
+loaderPage()
 
 function signout() {
     eraseCookie(tokenCookieName)
@@ -128,4 +129,14 @@ function getInfosUser() {
         .catch(error => {
             console.error("erreur lors de la récupération des données utilisateur", error)
         })
+}
+
+function loaderPage() {
+    window.addEventListener("load", () => {
+        loader.classList.add("loader--hidden")
+
+        loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader)
+        })
+    })
 }
