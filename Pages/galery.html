@@ -6,7 +6,40 @@
 </div>
 
 <!-- Images section -->
-<section class="container my-5">
+<section class="container my-5 d-flex flex-column align-items-center">
+    <button type="button" class="btn btn-primary w-50 mb-3" data-bs-toggle="modal"
+        data-bs-target="#savePhotoModalLabel">
+        Ajouter une image
+    </button>
+    <!-- Modal save new image -->
+    <div class="modal fade" id="savePhotoModalLabel" tabindex="-1" aria-labelledby="savePhotoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="savePhotoModalLabel">
+                        Enregistrer une photo
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="saveNamePhotoInput" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="saveNamePhotoInput" name="Titre" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="saveImageInput" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="saveImageInput" name="Image" />
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Images -->
     <div class="row row-cols-2 row-cols-lg-4" id="all-images">
     </div>
@@ -25,8 +58,7 @@
                     <form>
                         <div class="mb-3">
                             <label for="NamePhotoInput" class="form-label">Titre</label>
-                            <input type="text" class="form-control" id="NamePhotoInput"
-                                name="Titre" />
+                            <input type="text" class="form-control" id="NamePhotoInput" name="Titre" />
                         </div>
                         <div class="mb-3">
                             <label for="ImageInput" class="form-label">Image</label>
@@ -57,7 +89,7 @@
                             <p for="NamePhotoInput" class="form-label" id="delete-modal-image-name"></p>
                         </div>
                         <div class="mb-3">
-                            <img src="" alt="Repas image" class="rounded w-100" id="delete-modal-image"/>
+                            <img src="" alt="Repas image" class="rounded w-100" id="delete-modal-image" />
                         </div>
                         <div class="text-center">
                             <button type="button" class="btn btn-danger">supprimer</button>
