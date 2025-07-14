@@ -16,7 +16,8 @@ export default defineConfig([
         apiUrl: "writable",
         sanitizeHtml:"writable",
         getInfosUser: "writable",
-        loaderPage: "writable"
+        loaderPage: "writable",
+        getToken:"writable"
       }
     },
     rules: {

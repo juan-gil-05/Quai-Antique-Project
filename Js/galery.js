@@ -18,7 +18,7 @@ async function getImages() {
                         <div class="image-card text-white">
                             <img src="${foodImagePath}" alt="Repas image" class="rounded w-100" />
                             <p class="titre-image">${foodName}</p>
-                            <div class="action-image-buttons">
+                            <div class="action-image-buttons" data-show="connected">
                                 <button type="button" class="btn btn-outline-light btn-edit"
                                     data-name="${foodName}" data-img="${foodImagePath}" data-bs-toggle="modal"
                                     data-bs-target="#EditionPhoto1Modal">

@@ -1,0 +1,9 @@
+.menu-card {
+    border-left: 4px solid $primary;
+
+    &:hover {
+        background-color: #f8f9fa;
+        transform: scale(1.01);
+        transition: all 0.2s ease;
+    }
+}
