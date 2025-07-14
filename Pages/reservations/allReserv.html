@@ -11,3 +11,39 @@
 <!-- All reservations -->
 <div class="container text-center allreservations mb-5" id="all-reserv">
 </div>
+<!-- Modal Delete -->
+<div class="modal fade" id="DeleteReservationModal" tabindex="-1" aria-labelledby="DeleteReservationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header p-4">
+                <h2 class="modal-title fs-5" id="DeleteReservationModalLabel">
+                    Êtes-vous sûr de vouloir supprimer cette reservation ?
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form class="d-flex flex-column align-items-cener">
+                    <div class="mb-3 d-flex gap-2">
+                        <span class="fw-bold">Date: </span>
+                        <p for="NamePhotoInput" class="form-label" id="delete-modal-date"></p>
+                    </div>
+                    <div class="mb-3 d-flex gap-2">
+                        <span class="fw-bold">Heure: </span>
+                        <p for="NamePhotoInput" class="form-label" id="delete-modal-hour"></p>
+                    </div>
+                    <div class="mb-3 d-flex gap-2">
+                        <span class="fw-bold">Nombres de convives: </span>
+                        <p for="NamePhotoInput" class="form-label" id="delete-modal-guestNumber"></p>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-danger">supprimer</button>
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+                            Annuler
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
