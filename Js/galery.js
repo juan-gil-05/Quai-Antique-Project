@@ -60,7 +60,7 @@ function ButtonEvents() {
 
 // pour charger les deux fonctions
 async function loadImages() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 15; i++) {
         await getImages()
     }
     ButtonEvents()

@@ -4,6 +4,7 @@ const logoutBtn = document.getElementById("logout-btn")
 const RoleCookieName = "role"
 const apiUrl = "https://main-bvxea6i-hbxvgtrkal2cs.fr-4.platformsh.site/api/"
 const loader = document.getElementById("loader")
+
 /*
 ROLES : 
   - disconnected
@@ -136,7 +137,9 @@ function loaderPage() {
         loader.classList.add("loader--hidden")
 
         loader.addEventListener("transitionend", () => {
-            document.body.removeChild(loader)
+            if (loader && loader.parentNode === document.body) {
+                document.body.removeChild(loader)
+            }
         })
     })
 }

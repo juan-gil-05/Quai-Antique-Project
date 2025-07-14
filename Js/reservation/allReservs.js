@@ -18,6 +18,7 @@ async function getAllReservs() {
     }).join("")
 
     allReserv.innerHTML = html
+
 }
 
 getAllReservs()
