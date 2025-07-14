@@ -117,13 +117,13 @@ function userInscription() {
         .then(response => {
             if (response.ok) {
                 return response.json()
+                    .then(() => {
+                        alert("Bravo " + dataForm.get("first-name") + ", vous êtes maintenant inscrit, vous pouvez vous connecter.")
+                        document.location.href = "/login"
+                    })
             } else {
                 alert("Erreur lors de l'inscription")
             }
-        })
-        .then(() => {
-            alert("Bravo " + dataForm.get("first-name") + ", vous êtes maintenant inscrit, vous pouvez vous connecter.")
-            document.location.href = "/login"
         })
         .catch(error => console.log("error", error))
 }
