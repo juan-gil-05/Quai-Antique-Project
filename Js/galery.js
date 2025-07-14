@@ -16,15 +16,15 @@ async function getImages() {
             // la section avec les images des repas 
             const html = `<div class="col p-3">
                         <div class="image-card text-white">
-                            <img src="${foodImagePath}" alt="Repas image" class="rounded w-100" />
-                            <p class="titre-image">${foodName}</p>
-                            <div class="action-image-buttons" data-show="connected">
-                                <button type="button" class="btn btn-outline-light btn-edit"
+                            <img src="${foodImagePath}" alt="Repas image" class="rounded w-100" id="FoodImg"/>
+                            <p class="titre-image" id="foodName">${foodName}</p>
+                            <div class="action-image-buttons" data-show="admin">
+                                <button type="button" class="btn btn-outline-light btn-edit" id="editFoodAction"
                                     data-name="${foodName}" data-img="${foodImagePath}" data-bs-toggle="modal"
                                     data-bs-target="#EditionPhoto1Modal">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
-                                <button type="button" class="btn btn-outline-light btn-delete"
+                                <button type="button" class="btn btn-outline-light btn-delete" id="deleteFoodAction"
                                     data-name="${foodName}" data-img="${foodImagePath}" data-bs-toggle="modal"
                                     data-bs-target="#DeletePhoto1Modal">
                                     <i class="bi bi-trash"></i>
@@ -34,6 +34,7 @@ async function getImages() {
                     </div>`
 
             galeryImages.innerHTML += html
+            showAndHideElementsForRoles()
         }).catch(error => {
             console.error("erreur lors de la récupération des données utilisateur", error)
         })
