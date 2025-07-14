@@ -2,6 +2,8 @@ const galeryImages = document.getElementById("all-images")
 const NamePhotoInput = document.getElementById("NamePhotoInput")
 const deleteModalImage = document.getElementById("delete-modal-image")
 const deleteModalImageName = document.getElementById("delete-modal-image-name")
+const saveNamePhotoInput = document.getElementById("saveNamePhotoInput")
+const saveNewImageBtn = document.getElementById("saveNewImage")
 
 // Fonction pour appeller l'api (TheMealDb) afin de récuperer les images et noms des repas
 async function getImages() {
@@ -64,6 +66,13 @@ async function loadImages() {
         await getImages()
     }
     ButtonEvents()
+}
+
+saveNewImageBtn.addEventListener("click", verifyImageName)
+
+function verifyImageName() {
+    const newImageName = sanitizeHtml(saveNamePhotoInput.value)
+    console.log(newImageName)
 }
 
 loadImages()
