@@ -1,6 +1,7 @@
 const lastNameInput = document.getElementById("NomInput")
 const nameInput = document.getElementById("PrenomInput")
 const NbConvivesInput = document.getElementById("NbConvivesInput")
+const AllergieInput = document.getElementById("AllergieInput")
 const DateInput = document.getElementById("DateInput")
 const midiRadio = document.getElementById("midiRadio")
 const soirRadio = document.getElementById("soirRadio")
@@ -96,6 +97,16 @@ soirRadio.addEventListener("change", () => {
         showHours(heuresSoir)
     }
 })
+
+btnValidation.addEventListener("click", saveReserv)
+
+function saveReserv() {
+    const allergies = sanitizeHtml(AllergieInput.value)
+
+    console.log(AllergieInput.value)
+    console.log(allergies)
+}
+
 
 async function getUserInfo() {
     const userInfo = await getInfosUser()
