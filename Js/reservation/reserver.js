@@ -107,7 +107,6 @@ function saveReserv() {
     console.log(allergies)
 }
 
-
 async function getUserInfo() {
     const userInfo = await getInfosUser()
 
