@@ -8,31 +8,33 @@
     }
 }
 
-.tooltip-menu {
-    padding: 3px 8px;
-    background-color: $bg-dark;
-    border-radius: 8px;
-    color: white;
-    position: relative;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease;
 
-    &::after {
-        content: "";
-        position: absolute;
-        border-width: 5px;
-        border-radius: 50%;
-        border-style: solid;
-        top: 50%;
-        right: 0px;
-        transform: translate(2%, -50%);
-        margin-right: -3%;
-        border-color: $bg-dark;
+
+.add-foodOrMenu-btn {
+
+    .tooltip-menu {
+        padding: 3px 8px;
+        background-color: $bg-dark;
+        border-radius: 8px;
+        color: white;
+        position: relative;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-width: 5px;
+            border-radius: 50%;
+            border-style: solid;
+            top: 50%;
+            right: 0px;
+            transform: translate(2%, -50%);
+            margin-right: -3%;
+            border-color: $bg-dark;
+        }
     }
-}
-
-.add-food-btn {
 
     &:hover .tooltip-menu {
         visibility: visible;

@@ -11,7 +11,8 @@ export const allRoutes = [
     new Route("/allReservations", "Toutes les réservations", "/Pages/reservations/allReserv.html", ["admin", "ROLE_USER"], "Js/reservation/allReservs.js"),
     new Route("/reserver", "Faire une réservation", "/Pages/reservations/reserver.html", ["admin", "ROLE_USER"], "Js/reservation/reserver.js"),
     new Route("/menu", "La carte ", "/Pages/menu/menu.html", ["admin", "ROLE_USER"], "Js/menu/menu.js"),
-    new Route("/nouveauPlat", "La carte ", "/Pages/menu/newFood.html", ["admin", "ROLE_USER"], "Js/menu/newFood.js")
+    new Route("/nouveauPlat", "nouveau plat", "/Pages/menu/newFood.html", ["admin", "ROLE_USER"], "Js/menu/newFood.js"),
+    new Route("/nouveauMenu", "nouveau menu", "/Pages/menu/newMenu.html", ["admin", "ROLE_USER"], "Js/menu/newMenu.js")
 ]
 
 export const websiteName = "Quai Antique"

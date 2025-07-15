@@ -14,9 +14,10 @@
                     <h2 class="mb-0">Nos plats</h2>
                     <!-- Bouton pour ajouter un nouveau plat  -->
                     <div
-                        class="add-food-btn position-absolute end-0 top-50 translate-middle-y d-flex align-items-center gap-1">
+                        class="add-foodOrMenu-btn position-absolute end-0 top-50 translate-middle-y d-flex align-items-center gap-1">
                         <small class="tooltip-menu">Ajouter un plat</small>
-                        <a href="/nouveauPlat"><i role="button" class="bi bi-plus-circle-fill fs-4 text-dark me-2" data-show="admin"></i></a>
+                        <a href="/nouveauPlat"><i role="button" class="bi bi-plus-circle-fill fs-4 text-dark me-2"
+                                data-show="admin"></i></a>
                     </div>
                 </div>
                 <!-- Ici tous les plats -->
@@ -24,7 +25,16 @@
         </div>
         <!-- Les menus -->
         <div class="col px-4" id="allMenus">
-            <h2 class="text-center mb-3">Nos menus</h2>
+            <div class="position-relative text-center mb-3">
+                <h2 class="text-center mb-3">Nos menus</h2>
+                <!-- Bouton pour ajouter un nouveau menu  -->
+                <div
+                    class="add-foodOrMenu-btn position-absolute end-0 top-50 translate-middle-y d-flex align-items-center gap-1">
+                    <small class="tooltip-menu">Ajouter un menu</small>
+                    <a href="/nouveauMenu"><i role="button" class="bi bi-plus-circle-fill fs-4 text-dark me-2"
+                            data-show="admin"></i></a>
+                </div>
+            </div>
             <!-- Ici tous les menus -->
         </div>
     </div>
