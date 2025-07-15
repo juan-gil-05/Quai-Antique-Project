@@ -8,8 +8,20 @@
     }
 }
 
+// Pour afficher les bouton d'éditer et supprimer
+.food-list, .menu-card {
+    position: relative;
 
+    .action-buttons {
+        width: 100%;
+        padding: 5px 0px;
+        display: flex;
+        gap: 5px;
+        justify-content: flex-end;
+    }
+}
 
+// Pour afficher les tooltips
 .add-foodOrMenu-btn {
 
     .tooltip-menu {

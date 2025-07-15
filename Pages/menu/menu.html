@@ -37,5 +37,180 @@
             </div>
             <!-- Ici tous les menus -->
         </div>
+        <!-- Modal edition des plats -->
+        <div class="modal fade" id="EditionFoodModal" tabindex="-1" aria-labelledby="EditionFoodModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="EditionFoodModalLabel">
+                            Edition plat
+                        </h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- Titre -->
+                            <div class="mb-3">
+                                <label for="editFoodTitleInput" class="form-label mb-0">Titre: </label>
+                                <input type="text" class="form-control" id="editFoodTitleInput" />
+                                <div class="invalid-feedback">
+                                    Ce champ est requis
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <label for="editFoodDescriptionInput" class="form-label mb-0">Description: </label>
+                                <input type="text" class="form-control" id="editFoodDescriptionInput" />
+                                <div class="invalid-feedback">
+                                    Ce champ est requis
+                                </div>
+                            </div>
+                            <!-- Prix -->
+                            <div class="mb-3">
+                                <label for="editFoodPriceInput" class="form-label mb-0">Prix: </label>
+                                <input type="number" min="0" class="form-control" id="editFoodPriceInput" />
+                                <div class="invalid-feedback">
+                                    Ce champ est requis
+                                </div>
+                            </div>
+                            <!-- Btn submit -->
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary" id="editFood">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Delete des plats-->
+        <div class="modal fade" id="DeleteFoodModal" tabindex="-1" aria-labelledby="DeleteFoodModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="DeleteFoodModalLabel">
+                            Êtes-vous sûr de vouloir supprimer ce plat ?
+                        </h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- Titre -->
+                            <div class="mb-3">
+                                <label for="deleteFoodTitleInput" class="form-label mb-0">Titre: </label>
+                                <input type="text" class="form-control" id="deleteFoodTitleInput" disabled readonly />
+                            </div>
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <label for="deleteFoodDescriptionInput" class="form-label mb-0">Description: </label>
+                                <input type="text" class="form-control" id="deleteFoodDescriptionInput" disabled
+                                    readonly />
+                            </div>
+                            <!-- Prix -->
+                            <div class="mb-3">
+                                <label for="deleteFoodPriceInput" class="form-label mb-0">Prix: </label>
+                                <input type="number" min="0" class="form-control" id="deleteFoodPriceInput" disabled
+                                    readonly />
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger">supprimer</button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+                                    Annuler
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal edition des plats -->
+        <div class="modal fade" id="EditionMenuModal" tabindex="-1" aria-labelledby="EditionMenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="EditionMenuModalLabel">
+                            Edition plat
+                        </h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- Titre -->
+                            <div class="mb-3">
+                                <label for="editMenuTitleInput" class="form-label mb-0">Titre: </label>
+                                <input type="text" class="form-control" id="editMenuTitleInput" />
+                                <div class="invalid-feedback">
+                                    Ce champ est requis
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <label for="editMenuDescriptionInput" class="form-label mb-0">Description: </label>
+                                <input type="text" class="form-control" id="editMenuDescriptionInput" />
+                                <div class="invalid-feedback">
+                                    Ce champ est requis
+                                </div>
+                            </div>
+                            <!-- Prix -->
+                            <div class="mb-3">
+                                <label for="editMenuPriceInput" class="form-label mb-0">Prix: </label>
+                                <input type="number" min="0" class="form-control" id="editMenuPriceInput" />
+                                <div class="invalid-feedback">
+                                    Ce champ est requis
+                                </div>
+                            </div>
+                            <!-- Btn submit -->
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary" id="editMenu">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Delete des plats-->
+        <div class="modal fade" id="DeleteMenuModal" tabindex="-1" aria-labelledby="DeleteMenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="DeleteMenuModalLabel">
+                            Êtes-vous sûr de vouloir supprimer ce plat ?
+                        </h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- Titre -->
+                            <div class="mb-3">
+                                <label for="deleteMenuTitleInput" class="form-label mb-0">Titre: </label>
+                                <input type="text" class="form-control" id="deleteMenuTitleInput" disabled readonly />
+                            </div>
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <label for="deleteMenuDescriptionInput" class="form-label mb-0">Description: </label>
+                                <input type="text" class="form-control" id="deleteMenuDescriptionInput" disabled
+                                    readonly />
+                            </div>
+                            <!-- Prix -->
+                            <div class="mb-3">
+                                <label for="deleteMenuPriceInput" class="form-label mb-0">Prix: </label>
+                                <input type="number" min="0" class="form-control" id="deleteMenuPriceInput" disabled
+                                    readonly />
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger">supprimer</button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+                                    Annuler
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

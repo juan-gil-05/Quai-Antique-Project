@@ -12115,6 +12115,17 @@ textarea.form-control-lg {
   transition: all 0.2s ease;
 }
 
+.food-list, .menu-card {
+  position: relative;
+}
+.food-list .action-buttons, .menu-card .action-buttons {
+  width: 100%;
+  padding: 5px 0px;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
 .add-foodOrMenu-btn .tooltip-menu {
   padding: 3px 8px;
   background-color: #292222;
