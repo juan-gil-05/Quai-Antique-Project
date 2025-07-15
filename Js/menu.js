@@ -17,7 +17,6 @@ function getAllFood() {
         .then(result => result.json())
         .then(data => {
             const html = data.map(food => {
-                console.log(food)
                 return `<div class="list-group-item list-group-item-action p-3">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1 fw-semibold">${food.title}</h5>
@@ -45,7 +44,6 @@ function getAllMenus() {
         .then(result => result.json())
         .then(data => {
             const html = data.map(menu => {
-                console.log(menu)
                 return `<div class="card menu-card shadow-sm mb-4">
                             <div class="card-body">
                                 <h5 class="card-title text-success">${menu.title} - ${menu.price} €</h5>

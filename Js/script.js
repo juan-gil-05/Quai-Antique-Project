@@ -108,7 +108,6 @@ function sanitizeHtml(text) {
     tempHtml.textContent = text
     return tempHtml.innerHTML
 }
-
 function getInfosUser() {
     const myHeaders = new Headers()
     myHeaders.append("X-AUTH-TOKEN", getToken())
