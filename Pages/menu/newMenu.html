@@ -1,41 +1,39 @@
 <!-- Hero -->
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
-        <h1>Nouveau menu</h1>
+        <h1>Ajouter un nouveau menu</h1>
     </div>
 </div>
 <!-- Form new menu -->
-<div class="container my-5">
-    <form>
-        <!-- Titre -->
-        <div class="mb-3">
-            <label for="saveMenuTitleInput" class="form-label mb-0">Titre: </label>
-            <input type="text" class="form-control" id="saveMenuTitleInput" />
-            <div class="invalid-feedback">
-                Ce champ est requis
-            </div>
+<section class="container py-5">
+    <div class="card shadow-lg p-4 mx-auto">
+        <!-- Title -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="saveMenuTitleInput" placeholder="Ex: Menu Tradition" />
+            <label for="saveMenuTitleInput">Titre</label>
+            <div class="invalid-feedback">Ce champ est requis</div>
         </div>
         <!-- Description -->
-        <div class="mb-3">
-            <label for="saveMenuDescriptionInput" class="form-label mb-0">Description: </label>
+        <div class="form-floating mb-3">
             <input type="text" class="form-control" id="saveMenuDescriptionInput"
-                placeholder="liste des choix possible dans le menu" />
-            <div class="invalid-feedback">
-                Ce champ est requis
-            </div>
+                placeholder="Ex: Entrée + Plat + Dessert" />
+            <label for="saveMenuDescriptionInput">Description</label>
+            <div class="invalid-feedback">Ce champ est requis</div>
         </div>
-        <!-- Prix -->
-        <div class="mb-3">
-            <label for="saveMenuPriceInput" class="form-label mb-0">Prix: </label>
-            <input type="number" min="0" class="form-control" id="saveMenuPriceInput" />
-            <div class="invalid-feedback">
-                Ce champ est requis
-            </div>
+        <!-- Price -->
+        <div class="form-floating mb-4">
+            <input type="number" min="0" class="form-control" id="saveMenuPriceInput" placeholder="Ex: 25.00" />
+            <label for="saveMenuPriceInput">Prix (€)</label>
+            <div class="invalid-feedback">Ce champ est requis</div>
         </div>
-        <!-- Btn submit -->
-        <div class="text-center">
-            <button type="button" class="btn btn-primary" id="saveNewMenu" disabled>Enregistrer</button>
-            <a href="/menu" type="button" class="btn btn-danger">Annuler</a>
+        <div class="text-end">
+            <button type="button" class="btn btn-success me-2" id="saveNewMenu" disabled>
+                <i class="bi bi-check-circle me-1"></i> Enregistrer
+            </button>
+            <a href="/menu" class="btn btn-outline-secondary">
+                <i class="bi bi-x-circle me-1"></i> Annuler
+            </a>
         </div>
-    </form>
-</div>
+        </form>
+    </div>
+</section>

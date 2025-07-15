@@ -80,7 +80,7 @@ function validatePassword(input) {
 }
 
 function validateConfirmationPassword(inputPwd, inputConfirmPwd) {
-    if (inputPwd.value == inputConfirmPwd.value) {
+    if (inputPwd.value != "" && inputPwd.value == inputConfirmPwd.value) {
         inputConfirmPwd.classList.add("is-valid")
         inputConfirmPwd.classList.remove("is-invalid")
         return true

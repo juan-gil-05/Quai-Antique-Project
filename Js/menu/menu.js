@@ -89,6 +89,7 @@ async function getAllMenus() {
             }).join("")
 
             allMenus.innerHTML += html
+            showAndHideElementsForRoles()
         })
 }
 

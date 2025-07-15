@@ -1,40 +1,46 @@
 <!-- Hero -->
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
-        <h1>Nouveau plat</h1>
+        <h1>Ajouter un nouveau plat</h1>
     </div>
 </div>
 <!-- Form new food -->
-<div class="container my-5">
-    <form>
-        <!-- Titre -->
-        <div class="mb-3">
-            <label for="saveFoodTitleInput" class="form-label mb-0">Titre: </label>
-            <input type="text" class="form-control" id="saveFoodTitleInput" />
-            <div class="invalid-feedback">
-                Ce champ est requis
+<section class="container py-5">
+    <div class="card shadow-lg p-4 mx-auto">
+        <form>
+            <!-- Title -->
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="saveFoodTitleInput" placeholder="Ex: Magret de canard" />
+                <label for="saveFoodTitleInput">Titre</label>
+                <div class="invalid-feedback">
+                    Ce champ est requis
+                </div>
             </div>
-        </div>
-        <!-- Description -->
-        <div class="mb-3">
-            <label for="saveFoodDescriptionInput" class="form-label mb-0">Description: </label>
-            <input type="text" class="form-control" id="saveFoodDescriptionInput" />
-            <div class="invalid-feedback">
-                Ce champ est requis
+            <!-- Description -->
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="saveFoodDescriptionInput"
+                    placeholder="Ex: Magret grillé au miel" />
+                <label for="saveFoodDescriptionInput">Description</label>
+                <div class="invalid-feedback">
+                    Ce champ est requis
+                </div>
             </div>
-        </div>
-        <!-- Prix -->
-        <div class="mb-3">
-            <label for="saveFoodPriceInput" class="form-label mb-0">Prix: </label>
-            <input type="number" min="0" class="form-control" id="saveFoodPriceInput" />
-            <div class="invalid-feedback">
-                Ce champ est requis
+            <!-- Price -->
+            <div class="form-floating mb-4">
+                <input type="number" min="0" class="form-control" id="saveFoodPriceInput" placeholder="Ex: 19.50" />
+                <label for="saveFoodPriceInput">Prix (€)</label>
+                <div class="invalid-feedback">
+                    Ce champ est requis
+                </div>
             </div>
-        </div>
-        <!-- Btn submit -->
-        <div class="text-center">
-            <button type="button" class="btn btn-primary" id="saveNewFood" disabled>Enregistrer</button>
-            <a href="/menu" type="button" class="btn btn-danger">Annuler</a>
-        </div>
-    </form>
-</div>
+            <div class="text-end">
+                <button type="submit" class="btn btn-success me-2" id="saveNewFood" disabled>
+                    <i class="bi bi-check-circle me-1"></i> Enregistrer
+                </button>
+                <a href="/menu" class="btn btn-outline-secondary">
+                    <i class="bi bi-x-circle me-1"></i> Annuler
+                </a>
+            </div>
+        </form>
+    </div>
+</section>

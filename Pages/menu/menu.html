@@ -8,7 +8,7 @@
 <section class="container mt-4 mb-5">
     <div class="row row-cols-1 row-cols-lg-2">
         <!-- Les plats -->
-        <div class="col px-4">
+        <div class="col px-4 mb-3">
             <div class="list-group" id="allFood">
                 <div class="position-relative text-center mb-3">
                     <h2 class="mb-0">Nos plats</h2>
@@ -61,7 +61,7 @@
                             <!-- Description -->
                             <div class="mb-3">
                                 <label for="editFoodDescriptionInput" class="form-label mb-0">Description: </label>
-                                <input type="text" class="form-control" id="editFoodDescriptionInput" />
+                                <textarea type="text" class="form-control" id="editFoodDescriptionInput"></textarea>
                                 <div class="invalid-feedback">
                                     Ce champ est requis
                                 </div>
@@ -104,8 +104,8 @@
                             <!-- Description -->
                             <div class="mb-3">
                                 <label for="deleteFoodDescriptionInput" class="form-label mb-0">Description: </label>
-                                <input type="text" class="form-control" id="deleteFoodDescriptionInput" disabled
-                                    readonly />
+                                <textarea type="text" class="form-control" id="deleteFoodDescriptionInput" disabled
+                                    readonly></textarea>
                             </div>
                             <!-- Prix -->
                             <div class="mb-3">
@@ -124,7 +124,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Modal edition des plats -->
         <div class="modal fade" id="EditionMenuModal" tabindex="-1" aria-labelledby="EditionMenuModalLabel"
             aria-hidden="true">
@@ -149,7 +149,7 @@
                             <!-- Description -->
                             <div class="mb-3">
                                 <label for="editMenuDescriptionInput" class="form-label mb-0">Description: </label>
-                                <input type="text" class="form-control" id="editMenuDescriptionInput" />
+                                <textarea type="text" class="form-control" id="editMenuDescriptionInput"></textarea>
                                 <div class="invalid-feedback">
                                     Ce champ est requis
                                 </div>
@@ -192,8 +192,8 @@
                             <!-- Description -->
                             <div class="mb-3">
                                 <label for="deleteMenuDescriptionInput" class="form-label mb-0">Description: </label>
-                                <input type="text" class="form-control" id="deleteMenuDescriptionInput" disabled
-                                    readonly />
+                                <textarea type="text" class="form-control" id="deleteMenuDescriptionInput" disabled
+                                    readonly></textarea>
                             </div>
                             <!-- Prix -->
                             <div class="mb-3">
