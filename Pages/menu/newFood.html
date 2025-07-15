@@ -1,0 +1,40 @@
+<!-- Hero -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Nouveau plat</h1>
+    </div>
+</div>
+<!-- Form new food -->
+<div class="container my-5">
+    <form>
+        <!-- Titre -->
+        <div class="mb-3">
+            <label for="saveFoodTitleInput" class="form-label mb-0">Titre: </label>
+            <input type="text" class="form-control" id="saveFoodTitleInput" />
+            <div class="invalid-feedback">
+                Ce champ est requis
+            </div>
+        </div>
+        <!-- Description -->
+        <div class="mb-3">
+            <label for="saveFoodDescriptionInput" class="form-label mb-0">Description: </label>
+            <input type="text" class="form-control" id="saveFoodDescriptionInput" />
+            <div class="invalid-feedback">
+                Ce champ est requis
+            </div>
+        </div>
+        <!-- Prix -->
+        <div class="mb-3">
+            <label for="saveFoodPriceInput" class="form-label mb-0">Prix: </label>
+            <input type="number" min="0" class="form-control" id="saveFoodPriceInput" />
+            <div class="invalid-feedback">
+                Ce champ est requis
+            </div>
+        </div>
+        <!-- Btn submit -->
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" id="saveNewFood" disabled>Enregistrer</button>
+            <a href="/menu" type="button" class="btn btn-danger">Annuler</a>
+        </div>
+    </form>
+</div>
